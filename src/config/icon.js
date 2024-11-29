@@ -129,7 +129,7 @@ const weatherList = [
 
 export default [
   {
-    name: '多彩标记图标', // 分组名称
+    name: '多彩標記圖示', // 分组名称
     type: 'sign2', // 分组的值
     list: iconList.map((item, index) => {
       return {
@@ -149,7 +149,7 @@ export default [
     })
   },
   {
-    name: '头像', // 分组名称
+    name: '頭像', // 分组名称
     type: 'avatar', // 分组的值
     list: avatarList.map((item, index) => {
       return {
@@ -169,7 +169,7 @@ export default [
     })
   },
   {
-    name: '旗帜', // 分组名称
+    name: '旗幟', // 分组名称
     type: 'flag', // 分组的值
     list: flagList.map((item, index) => {
       return {
@@ -179,7 +179,7 @@ export default [
     })
   },
   {
-    name: '天气', // 分组名称
+    name: '天氣', // 分组名称
     type: 'weather', // 分组的值
     list: weatherList.map((item, index) => {
       return {

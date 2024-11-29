@@ -1,7 +1,13 @@
 import { createRouter, createWebHashHistory, createWebHistory } from 'vue-router'
-import IndexPage from '@/pages/Index/Index'
+import IndexPage from '@/pages/Edit/Index'
+import QuizMate from '@/pages/QuizMate'
 
 const routes = [
+  {
+    path: '/',
+    name: 'QuizMate',  // 修改為 QuizMate
+    component: QuizMate  // 修改為 QuizMate
+  },
   {
     path: '/index',
     name: 'Index',

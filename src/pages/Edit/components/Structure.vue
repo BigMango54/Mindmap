@@ -11,7 +11,6 @@
         <div class="imgBox">
           <img :src="layoutImgMap[item.value]" alt="" />
         </div>
-        <div class="name">{{ item.name }}</div>
       </div>
     </div>
   </Sidebar>
@@ -26,8 +25,7 @@ import bus from '@/utils/bus.js'
 import { mapState, useStore } from 'vuex'
 import { layoutImgMap } from '@/config/constant.js'
 /**
- * @Author: 黄原寅
- * @Desc: 结构
+ * @Desc: 結構
  */
 const props = defineProps({
   mindMap: {
@@ -63,8 +61,7 @@ onMounted(() => {
   })
 })
 /**
- * @Author: 黄原寅
- * @Desc: 使用主题
+ * @Desc: 使用主題
  */
 const useLayout = layout => {
   layout.value = layout.value

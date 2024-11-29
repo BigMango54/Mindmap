@@ -4,6 +4,7 @@ import { getLang } from '@/api'
 
 const i18n = createI18n({
   legacy: false,
+  locale: 'zh-TW',
   locale: getLang(),
   messages
 })

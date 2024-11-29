@@ -1,13 +1,13 @@
 <template>
   <el-dialog custom-class="nodeImageDialog" v-model="dialogVisible" :title="$t('nodeImage.title')">
-    <div class="title">方式一</div>
+    <div class="title">方法一</div>
     <ImgUpload ref="ImgUploadRef" @changeImg="onchange" :value="img" style="margin-bottom: 12px"></ImgUpload>
-    <div class="title">方式二</div>
+    <div class="title">方法二</div>
     <div class="inputBox">
-      <span class="label">请输入图片地址</span>
+      <span class="label">請輸入圖片網址</span>
       <el-input v-model="imgUrl" size="small" placeholder="http://xxx.com/xx.jpg" @keydown.native.stop></el-input>
     </div>
-    <div class="title">可选</div>
+    <div class="title">可選</div>
     <div class="inputBox">
       <span class="label">{{ $t('nodeImage.imgTitle') }}</span>
       <el-input v-model="imgTitle" size="small" @keydown.native.stop></el-input>

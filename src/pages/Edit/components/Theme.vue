@@ -14,7 +14,6 @@
         <div class="imgBox">
           <img :src="themeMap[item.value]" alt="" />
         </div>
-        <div class="name">{{ item.name }}</div>
       </div>
     </div>
   </Sidebar>
@@ -114,7 +113,7 @@ const initGroup = () => {
   })
   groupList.value = [
     {
-      name: '经典',
+      name: '經典',
       list: classicsList
     },
     {
@@ -124,7 +123,7 @@ const initGroup = () => {
       })
     },
     {
-      name: '朴素',
+      name: '樸素',
       list: baiduList
     }
   ]
@@ -142,8 +141,8 @@ const useTheme = item => {
   const customThemeConfig = props.mindMap.getCustomThemeConfig()
   const hasCustomThemeConfig = Object.keys(customThemeConfig).length > 0
   if (hasCustomThemeConfig) {
-    ElMessageBox.confirm('你当前自定义过基础样式，是否覆盖？', '提示', {
-      confirmButtonText: '覆盖',
+    ElMessageBox.confirm('你當前自定義過基礎樣式，是否覆蓋？', '提示', {
+      confirmButtonText: '覆蓋',
       cancelButtonText: '保留',
       type: 'warning'
     })

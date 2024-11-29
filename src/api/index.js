@@ -7,10 +7,8 @@ const SIMPLE_MIND_MAP_DATA = 'SIMPLE_MIND_MAP_DATA'
 const SIMPLE_MIND_MAP_LANG = 'SIMPLE_MIND_MAP_LANG'
 const SIMPLE_MIND_MAP_LOCAL_CONFIG = 'SIMPLE_MIND_MAP_LOCAL_CONFIG'
 
-/**
- * @Author: 黄原寅
- * @Desc: 克隆思维导图数据，去除激活状态
- */
+
+// 創建Mindmap資料&激活
 const copyMindMapTreeData = (tree, root) => {
   tree.data = simpleDeepClone(root.data)
   // tree.data.isActive = false
@@ -23,10 +21,7 @@ const copyMindMapTreeData = (tree, root) => {
   return tree
 }
 
-/**
- * @Author: 黄原寅
- * @Desc: 获取缓存的思维导图数据
- */
+//獲取緩存的Mindmap資料
 export const getData = () => {
   let store = localStorage.getItem(SIMPLE_MIND_MAP_DATA)
   if (store === null) {
@@ -40,10 +35,7 @@ export const getData = () => {
   }
 }
 
-/**
- * @Author: 黄原寅
- * @Desc: 存储思维导图数据
- */
+//儲存Mindmap資料
 export const storeData = data => {
   try {
     let originData = getData()
@@ -56,10 +48,8 @@ export const storeData = data => {
   }
 }
 
-/**
- * @Author: 黄原寅
- * @Desc: 存储思维导图配置数据
- */
+
+//儲存Mindmap配置資料
 export const storeConfig = config => {
   try {
     let originData = getData()
@@ -75,39 +65,22 @@ export const storeConfig = config => {
   }
 }
 
-/**
- * @Author: 黄原寅
- * @Desc: 存储语言
- */
+//儲存語言
 export const storeLang = lang => {
   localStorage.setItem(SIMPLE_MIND_MAP_LANG, lang)
 }
 
-/**
- * @Author: 黄原寅
- * @Desc: 获取存储的语言
- */
+//獲取儲存語言
 export const getLang = () => {
-  let lang = localStorage.getItem(SIMPLE_MIND_MAP_LANG)
-  if (lang) {
-    return lang
-  }
-  storeLang('zh')
-  return 'zh'
+  return 'zh-TW';
 }
 
-/**
- * @Author: 黄原寅
- * @Desc: 存储本地配置
- */
+//儲存本地配置
 export const storeLocalConfig = config => {
   localStorage.setItem(SIMPLE_MIND_MAP_LOCAL_CONFIG, JSON.stringify(config))
 }
 
-/**
- * @Author: 黄原寅
- * @Desc: 获取本地配置
- */
+//獲取本地配置
 export const getLocalConfig = () => {
   let config = localStorage.getItem(SIMPLE_MIND_MAP_LOCAL_CONFIG)
   if (config) {

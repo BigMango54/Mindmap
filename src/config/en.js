@@ -2,23 +2,23 @@
 export const fontFamilyList = [
   {
     name: 'Song Ti',
-    value: '宋体, SimSun, Songti SC'
+    value: '宋體, SimSun, Songti SC'
   },
   {
     name: 'Microsoft Yahei',
-    value: '微软雅黑, Microsoft YaHei'
+    value: '微軟雅黑, Microsoft YaHei'
   },
   {
     name: 'Italics',
-    value: '楷体, 楷体_GB2312, SimKai, STKaiti'
+    value: '楷體, 楷體_GB2312, SimKai, STKaiti'
   },
   {
     name: 'Boldface',
-    value: '黑体, SimHei, Heiti SC'
+    value: '黑體, SimHei, Heiti SC'
   },
   {
     name: 'Official script',
-    value: '隶书, SimLi'
+    value: '隸書, SimLi'
   },
   {
     name: 'Andale Mono',

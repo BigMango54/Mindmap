@@ -263,7 +263,7 @@
     </div>
     <div class="tipBox" v-else>
       <div class="tipIcon iconfont icontianjiazijiedian"></div>
-      <div class="tipText">请选择一个节点</div>
+      <div class="tipText">請選擇一個節點</div>
     </div>
   </Sidebar>
 </template>

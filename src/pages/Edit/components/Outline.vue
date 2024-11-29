@@ -237,7 +237,7 @@ const insertNode = () => {
   isHandleNodeTreeRenderEnd.value = true
   beInsertNodeUid.value = createUid()
   props.mindMap.execCommand('INSERT_NODE', false, [], {
-    uid: beInsertNodeUid.value
+    uid: beInsertNodeUid.value,
   })
 }
 
@@ -248,7 +248,7 @@ const insertChildNode = () => {
   beInsertNodeUid.value = createUid()
   props.mindMap.execCommand('INSERT_CHILD_NODE', false, [], {
     uid: beInsertNodeUid.value
-  })
+  },)
 }
 
 // 激活当前节点且移动当前节点到画布中间

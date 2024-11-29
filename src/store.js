@@ -4,38 +4,47 @@ import { storeLocalConfig } from '@/api'
 
 const store = createStore({
   state: {
-    mindMapData: null, // 思维导图数据
+    mindMapData: null, // 思維導圖數據
     isHandleLocalFile: false, // 是否操作的是本地文件
     localConfig: {
       // 本地配置
-      isZenMode: false, // 是否是禅模式
-      openNodeRichText: true, // 是否开启节点富文本
-      useLeftKeySelectionRightKeyDrag: false, // 鼠标行为
-      isShowScrollbar: false // 是否显示滚动条
+      isZenMode: false, // 是否是禪模式
+      openNodeRichText: true, // 是否開啟節點富文本
+      useLeftKeySelectionRightKeyDrag: false, // 鼠標行為
+      isShowScrollbar: false // 是否顯示滾動條
     },
-    activeSidebar: '', // 当前显示的侧边栏
+    activeSidebar: '', // 當前顯示的側邊欄
     isDark: false, // 是否是暗黑模式
-    isOutlineEdit: false, // 是否是大纲编辑模式
-    isReadonly: false // 是否只读
+    isOutlineEdit: false, // 是否是大綱編輯模式
+    isReadonly: false, // 是否只讀
+    userId: null,
+    currentFileName: '',
   },
   mutations: {
+    setCurrentFileName(state, fileName) {
+      state.currentFileName = fileName
+    },
+    /*設定傳入的userID*/
+    setUserId(state, userId) {
+      state.userId = userId;
+    },
     /**
-     * @Author: 黄原寅
-     * @Desc: 设置思维导图数据
+     * @Author: 黃原寅
+     * @Desc: 設置思維導圖數據
      */
     setMindMapData(state, data) {
       state.mindMapData = data
     },
     /**
-     * @Author: 黄原寅
-     * @Desc: 设置操作本地文件标志位
+     * @Author: 黃原寅
+     * @Desc: 設置操作本地文件標誌位
      */
     setIsHandleLocalFile(state, data) {
       state.isHandleLocalFile = data
     },
     /**
-     * @Author: 黄原寅
-     * @Desc: 设置本地配置
+     * @Author: 黃原寅
+     * @Desc: 設置本地配置
      */
     setLocalConfig(state, data) {
       state.localConfig = {
@@ -45,35 +54,39 @@ const store = createStore({
       storeLocalConfig(state.localConfig)
     },
     /**
-     * @Author: 黄原寅
-     * @Desc: 设置当前显示的侧边栏
+     * @Author: 黃原寅
+     * @Desc: 側邊欄的控制
      */
     setActiveSidebar(state, data) {
       state.activeSidebar = data
     },
     /**
-     * @Author: 黄原寅
-     * @Desc: 设置暗黑模式
+     * @Author: 黃原寅
+     * @Desc: 設置暗黑模式
      */
     setIsDark(state, data) {
       state.isDark = data
     },
     /**
-     * @Author: 黄原寅
-     * @Desc: 设置大纲编辑模式
+     * @Author: 黃原寅
+     * @Desc: 設置大綱編輯模式
      */
     setIsOutlineEdit(state, data) {
       state.isOutlineEdit = data
     },
-    // 设置是否只读
+    // 設置是否只讀
     setIsReadonly(state, data) {
       state.isReadonly = data
-    }
+    },
+    // 
   },
   actions: {
+    updateCurrentFileName({ commit }, fileName) {
+      commit('setCurrentFileName', fileName)
+    },
     /**
-     * @Author: 黄原寅
-     * @Desc: 设置初始思维导图数据
+     * @Author: 黃原寅
+     * @Desc: 設置初始思維導圖數據
      */
     getUserMindMapData(ctx) {
       try {
@@ -89,6 +102,9 @@ const store = createStore({
         console.log(error)
       }
     }
+  },
+  getters: {
+    currentFileName: state => state.currentFileName
   }
 })
 

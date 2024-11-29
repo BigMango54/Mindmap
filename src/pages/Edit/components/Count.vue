@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <div class="countContainer" :class="{ isDark: isDark }">
     <div class="item">
       <span class="name">{{ $t('count.words') }}</span>
@@ -113,4 +113,4 @@ export default {
     display: none;
   }
 }
-</style>
+</style> -->

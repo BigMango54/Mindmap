@@ -47,4 +47,4 @@ export default ${JSON.stringify(list, null, 2).replace(/(url":\s*)"([^"]+)"(,)/g
 }
 
 run(fileDest)
-console.log('运行成功')
+console.log('運行成功')

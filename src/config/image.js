@@ -217,7 +217,7 @@ import travel_zhuyishixiang from '../assets/svg/travel/zhuyishixiang.svg'
 import travel_zuche from '../assets/svg/travel/zuche.svg'
 export default [
   {
-    "name": "商务",
+    "name": "商務",
     "list": [
       {
         "url": business_,
@@ -752,7 +752,7 @@ export default [
     ]
   },
   {
-    "name": "节日",
+    "name": "節日",
     "list": [
       {
         "url": festival_celianggongju,
@@ -1012,7 +1012,7 @@ export default [
     ]
   },
   {
-    "name": "医疗",
+    "name": "醫療",
     "list": [
       {
         "url": medicine_a1shilibiao,

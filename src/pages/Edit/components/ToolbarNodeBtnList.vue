@@ -24,18 +24,6 @@
         <span class="text">{{ $t('toolbar.redo') }}</span>
       </div>
       <div
-        v-if="item === 'painter'"
-        class="toolbarBtn"
-        :class="{
-          disabled: activeNodes.length <= 0 || hasGeneralization,
-          active: isInPainter
-        }"
-        @click="emit('startPainter')"
-      >
-        <span class="icon iconfont iconjiedian"></span>
-        <span class="text">{{ $t('toolbar.painter') }}</span>
-      </div>
-      <div
         v-if="item === 'siblingNode'"
         class="toolbarBtn"
         :class="{
@@ -68,7 +56,7 @@
         <span class="icon iconfont iconshanchu"></span>
         <span class="text">{{ $t('toolbar.deleteNode') }}</span>
       </div>
-      <div
+      <!-- <div
         v-if="item === 'image'"
         class="toolbarBtn"
         :class="{
@@ -78,8 +66,8 @@
       >
         <span class="icon iconfont iconimage"></span>
         <span class="text">{{ $t('toolbar.image') }}</span>
-      </div>
-      <div
+      </div> -->
+      <!-- <div
         v-if="item === 'icon'"
         class="toolbarBtn"
         :class="{
@@ -89,8 +77,8 @@
       >
         <span class="icon iconfont iconxiaolian"></span>
         <span class="text">{{ $t('toolbar.icon') }}</span>
-      </div>
-      <div
+      </div> -->
+      <!-- <div
         v-if="item === 'link'"
         class="toolbarBtn"
         :class="{
@@ -100,7 +88,7 @@
       >
         <span class="icon iconfont iconchaolianjie"></span>
         <span class="text">{{ $t('toolbar.link') }}</span>
-      </div>
+      </div> -->
       <div
         v-if="item === 'note'"
         class="toolbarBtn"
@@ -112,7 +100,7 @@
         <span class="icon iconfont iconflow-Mark"></span>
         <span class="text">{{ $t('toolbar.note') }}</span>
       </div>
-      <div
+      <!-- <div
         v-if="item === 'tag'"
         class="toolbarBtn"
         :class="{
@@ -122,8 +110,8 @@
       >
         <span class="icon iconfont iconbiaoqian"></span>
         <span class="text">{{ $t('toolbar.tag') }}</span>
-      </div>
-      <div
+      </div> -->
+      <!-- <div
         v-if="item === 'summary'"
         class="toolbarBtn"
         :class="{
@@ -133,8 +121,8 @@
       >
         <span class="icon iconfont icongaikuozonglan"></span>
         <span class="text">{{ $t('toolbar.summary') }}</span>
-      </div>
-      <div
+      </div> -->
+      <!-- <div
         v-if="item === 'associativeLine'"
         class="toolbarBtn"
         :class="{
@@ -144,8 +132,8 @@
       >
         <span class="icon iconfont iconlianjiexian"></span>
         <span class="text">{{ $t('toolbar.associativeLine') }}</span>
-      </div>
-      <div
+      </div> -->
+      <!-- <div
         v-if="item === 'formula'"
         class="toolbarBtn"
         :class="{
@@ -155,7 +143,7 @@
       >
         <span class="icon iconfont icongongshi"></span>
         <span class="text">{{ $t('toolbar.formula') }}</span>
-      </div>
+      </div> -->
     </template>
   </div>
 </template>
@@ -283,9 +271,9 @@ export default {
     justify-content: center;
     flex-direction: column;
     cursor: pointer;
-    margin-right: 20px;
+    margin-right: 30px;
     &:last-of-type {
-      margin-right: 0;
+      margin-right: 0; // 左邊工具欄的寬度
     }
     &:hover {
       &:not(.disabled) {
@@ -306,7 +294,7 @@ export default {
     }
     .icon {
       display: flex;
-      height: 26px;
+      height: 30px;
       background: #fff;
       border-radius: 4px;
       border: 1px solid #e9e9e9;
@@ -327,7 +315,7 @@ export default {
       flex-direction: row;
       justify-content: flex-start;
       margin-bottom: 10px;
-      width: 100%;
+      width: 200%;
       margin-right: 0;
       &:last-of-type {
         margin-bottom: 0;

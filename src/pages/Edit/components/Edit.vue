@@ -424,7 +424,7 @@ export default {
     hasFileURL() {
       const fileURL = this.$route.query.fileURL
       if (!fileURL) return false
-      return /\.(smm|json|xmind|md|xlsx)$/.test(fileURL)
+      return /\.(smm|json|xmind|md|xlsx||pdf)$/.test(fileURL)
     },
 
     /**
@@ -432,7 +432,7 @@ export default {
      * @Desc: 动态设置思维导图数据
      */
     setData(data) {
-      this.handleShowLoading()
+      this.handleShowLoading() 
       // this.mindMap.setData(data)
       if (data.root) {
         this.getMindMap().setFullData(data)
@@ -529,7 +529,7 @@ export default {
     testDynamicCreateNodes() {
       // return
       setTimeout(() => {
-        // 动态给指定节点添加子节点
+        动态给指定节点添加子节点
         // this.mindMap.execCommand(
         //   'INSERT_CHILD_NODE',
         //   false,

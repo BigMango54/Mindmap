@@ -3,7 +3,7 @@
     <div class="imgUploadPanel">
       <div class="upBtn" v-if="!value">
         <label for="imgUploadInput" class="imgUploadInputArea" @dragenter.stop.prevent @dragover.stop.prevent @drop.stop.prevent="onDrop"
-          >点击此处选择图片、或拖动图片到此</label
+          >點選此處選擇圖片或推動圖片到這</label
         >
         <input type="file" accept="image/*" id="imgUploadInput" @change="onImgUploadInputChange" />
       </div>

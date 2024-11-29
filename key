@@ -1,0 +1,14 @@
+set NODE_OPTIONS=--openssl-legacy-provider
+
+docker build -t mindmap .
+
+docker run -d -p 80:80 mindmap
+
+docker stop i
+docker ps
+
+在網頁搜尋localhost
+
+二級節點
+
+分支主題

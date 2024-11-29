@@ -13,7 +13,7 @@ import cactus from './cactus'
 
 export default [
     {
-        name: '奥利奥',
+        name: '奧利奧',
         value: 'oreo',
         theme: oreo,
         dark: false
@@ -25,7 +25,7 @@ export default [
         dark: false
     },
     {
-        name: '柠檬气泡',
+        name: '檸檬氣泡',
         value: 'lemonBubbles',
         theme: lemonBubbles,
         dark: false
@@ -37,13 +37,13 @@ export default [
         dark: false
     },
     {
-        name: '海蓝线',
+        name: '海藍色',
         value: 'seaBlueLine',
         theme: seaBlueLine,
         dark: false
     },
     {
-        name: '霓虹灯',
+        name: '霓虹燈',
         value: 'neonLamp',
         theme: neonLamp,
         dark: true
@@ -55,13 +55,13 @@ export default [
         dark: true
     },
     {
-        name: '莫兰迪',
+        name: '莫蘭迪',
         value: 'morandi',
         theme: morandi,
         dark: false
     },
     {
-        name: '脑图经典5',
+        name: '經典5',
         value: 'classic5',
         theme: classic5,
         dark: false
